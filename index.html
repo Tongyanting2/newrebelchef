@@ -7,70 +7,82 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q223PQXT4P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q223PQXT4P');
+</script>
 <header>
+    
+</header>
+<div>
     <nav>
         <ul class="links">
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="about.html">About</a>
-            </li>
+            
+            <a href="index.html" style="color: white; text-decoration: none; margin:100px 100px; font-size: 25px;">Home</a>
+            
+            <a href="about.html" style="color: white; text-decoration: none; margin:100px 100px; font-size: 25px;">About</a>
+            
+            <a href="contact.html" style="color: white; text-decoration: none; margin:100px 100px; font-size: 25px;">Contact Us</a>
+            
         </ul>
     </nav>
-</header>
-
+</div>
 <body>
          <div class="container">
             
-           <h1>Ex-Chefs' 
+           <h1>Ex-Chefs' Table Tales
             
             </h1>
               <div class="form-group">
-              <label for="preference"> Hungry? <label>
+              <label> Hungry? <label>
               <input type="text" id="preference" placeholder="Try searching for: fresh seafood, fried rice ...">
-              <button onclick="getRecommendation()">Get Recommendations </button>
+              <button onclick="getRestaurant()">Get Recommendations </button>
              </div>
                 <div class="dropdown">
-                    <div class="field">
-                        <select id="lc" name="lc">
-                        <option value>Location</option>
-                        <option value="nearMe__1">Nearby (< 1km)</option>
-                        <option value="nearMe__2">Nearby (< 2km)</option>
-                        <option value="nearMe__5">Nearby (< 5km)</option>
-                        <option value="North"> North </option>
-                        <option value="South"> South </option>
-                        <option value="East"> East </option>
-                        <option value="West"> West </option>
-                        </select>
+                    <select id="lc" name="lc">
+                    <option value="">Location</option>
+                    <option value="nearMe__1">Nearby (< 1km)</option>
+                    <option value="nearMe__2">Nearby (< 2km)</option>
+                    <option value="nearMe__5">Nearby (< 5km)</option>
+                    <option value="North"> North </option>
+                    <option value="South"> South </option>
+                    <option value="East"> East </option>
+                    <option value="West"> West </option>
+                    <option value="Central"> Central </option>
+                    </select>
 
-                        <select id="type" name="type">
-                        <option value>Craving For </option>
-                        <option value="7313">Chinese</option>
-                        <option value="7314">European</option>
-                        <option value="7318">Indian</option>
-                        <option value="7319">Italian</option>
-                        <option value="7320">Japanese</option>
-                        <option value="7321">Korean</option>
-                        <option value="7322">Malay</option>
-                        <option value="7324">Singaporean</option>
-                        <option value="7326">Thai</option>
-                        <option value="7327">Vietnamese</option>
-                        <option value="7328">Western</option>
-                        </select>
+                    <select id="type" name="type">
+                    <option value="">Craving For </option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="European">European</option>
+                    <option value="Indian">Indian</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Japanese">Japanese</option>
+                    <option value="Korean">Korean</option>
+                    <option value="Malay">Malay</option>
+                    <option value="Singaporean">Singaporean</option>
+                    <option value="Thai">Thai</option>
+                    <option value="Vietnamese">Vietnamese</option>
+                    <option value="Western">Western</option>
+                    </select>
 
-                        <select id="price" name="price">
-                        <option value>Budget</option>
-                        <option value="5">< $5</option>
-                        <option value="10">< $10</option>
-                        <option value="15">< $15</option>
-                        <option value="20">< $20</option>
-                        <option value="50">< $50</option>
-                        <option value="above-fifty">> $50</option>
-                        </select>
-                    </div>
+                    <select id="price" name="price">
+                    <option value="">Budget</option>
+                    <option value="5">< $5</option>
+                    <option value="10">< $10</option>
+                    <option value="15">< $15</option>
+                    <option value="20">< $20</option>
+                    <option value="50">< $50</option>
+                    <option value="above-fifty">> $50</option>
+                    </select>
                 </div>
          </div>
+         <div id="results" class="test"></div>
     <script src="script.js"></script>
 </body>
 </html>
