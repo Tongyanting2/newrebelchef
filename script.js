@@ -1,25 +1,3 @@
-function getRecommendation() {
-    var preference = document.getElementById("preference").value;
-    var recommendation = "";
-
-    // Logic to generate recommendation based on preference
-    switch (preference.toLowerCase()) {
-        case "italian":
-            recommendation = "You should try some delicious pizza or pasta!";
-            break;
-        case "mexican":
-            recommendation = "Tacos, burritos, or nachos might satisfy your craving!";
-            break;
-        case "chinese":
-            recommendation = "How about some tasty dim sum or fried rice?";
-            break;
-        default:
-            recommendation = "Sorry, we don't have a recommendation for that preference.";
-    }
-
-    document.getElementById("recommendation").innerText = recommendation;
-}
-
 function getRestaurant()
 {
     console.log('getRestaurant() is running')
@@ -30,7 +8,7 @@ function getRestaurant()
             area:"South",
             cuisine:"Chinese",
             link:"http://chefwangfriedrice.com/",
-            img:"",
+            img:"/pictures/chef wang fried rice.jpeg",
             tag:"",
         },
         {
@@ -39,7 +17,7 @@ function getRestaurant()
             area:"South",
             cuisine:"Chinese",
             link:"https://www.facebook.com/chefleungcf",
-            img:"",
+            img:"/pictures/chef leung ccf.jpeg",
             tag:"",
         },
         {
@@ -48,7 +26,7 @@ function getRestaurant()
             area:"Central",
             cuisine:"Chinese",
             link:"https://cantondelicacies.take.app/",
-            img:"",
+            img:"/pictures/canton delicacies.jpeg",
             tag:"",
         },
         {
@@ -57,7 +35,7 @@ function getRestaurant()
             area:"West",
             cuisine:"Chinese",
             link:"https://www.facebook.com/Volksg-103791911441414/",
-            img:"",
+            img:"/pictures/volk.jpeg",
             tag:"",
         },
         {
@@ -66,7 +44,7 @@ function getRestaurant()
             area:"Central",
             cuisine:"Thai",
             link:"https://ckcuisine.mymenu.com.sg/",
-            img:"",
+            img:"/pictures/ck cuisine.jpeg",
             tag:"",
         },
         {
@@ -75,7 +53,7 @@ function getRestaurant()
             area:"Central",
             cuisine:"Chinese",
             link:"NA",
-            img:"",
+            img:"/pictures/5-star dim sum.jpeg",
             tag:"",
         },
         {
@@ -84,7 +62,7 @@ function getRestaurant()
             area:"West",
             cuisine:"Chinese",
             link:"https://www.facebook.com/%E4%BA%9A%E7%94%B7%E6%89%B3%E9%9D%A2%E9%9D%A2%E7%B2%89%E7%B2%BF-yanan-ban-mian-noodle-102052842258851",
-            img:"",
+            img:"/pictures/yanan ban mian.jpeg",
             tag:"",
         },
         {
@@ -93,7 +71,7 @@ function getRestaurant()
             area:"North",
             cuisine:"Chinese",
             link:"https://www.facebook.com/Cheong-Fan-Paradise-112566314386887",
-            img:"",
+            img:"/pictures/cheong fun paradise.jpeg",
             tag:"",
         },
         {
@@ -102,7 +80,7 @@ function getRestaurant()
             area:"Central",
             cuisine:"Chinese",
             link:"https://www.facebook.com/professorchicken",
-            img:"",
+            img:"/pictures/yuan lang chicken.jpeg",
             tag:"",
         },
         {
@@ -111,7 +89,7 @@ function getRestaurant()
             area:"North",
             cuisine:"Western",
             link:"https://www.facebook.com/papajonesbbqandgrill/",
-            img:"",
+            img:"/pictures/papa jones bbq.jpeg",
             tag:"",
         },
         {
@@ -120,7 +98,7 @@ function getRestaurant()
             area:"Central",
             cuisine:"Chinese",
             link:"https://www.facebook.com/ANoodleStory/",
-            img:"",
+            img:"/pictures/a noodle story.jpeg",
             tag:"",
         },
         {
@@ -129,7 +107,7 @@ function getRestaurant()
             area:"Central",
             cuisine:"Chinese",
             link:"https://www.facebook.com/chefweihkcheongfun",
-            img:"",
+            img:"/pictures/chef wei.jpeg",
             tag:"",
         },
         {
@@ -138,7 +116,7 @@ function getRestaurant()
             area:"Central",
             cuisine:"Japanese",
             link:"https://www.facebook.com/LittleBowlSingapore/",
-            img:"",
+            img:"/pictures/little bowl.jpeg",
             tag:"",
         },
         {
@@ -147,7 +125,7 @@ function getRestaurant()
             area:"Central",
             cuisine:"Japanese",
             link:"https://www.facebook.com/Maruhachi2020/",
-            img:"",
+            img:"/pictures/maruhachi curry.jpeg",
             tag:"",
         },
         {
@@ -156,7 +134,7 @@ function getRestaurant()
             area:"East",
             cuisine:"Western",
             link:"https://meet4meat.sg/",
-            img:"",
+            img:"/pictures/meet 4 for meat.jpeg",
             tag:"",
         },
         {
@@ -165,7 +143,7 @@ function getRestaurant()
             area:"Central",
             cuisine:"Japanese",
             link:"https://www.facebook.com/NiceRice.SG",
-            img:"",
+            img:"/pictures/nice rice.jpeg",
             tag:"",
         },
         {
@@ -174,7 +152,7 @@ function getRestaurant()
             area:"West",
             cuisine:"Chinese",
             link:"https://www.facebook.com/Supreme-Xiao-Long-Bao-442386399496462/",
-            img:"",
+            img:"/pictures/supreme ramen .jpeg",
             tag:"",
         },
         {
@@ -183,7 +161,7 @@ function getRestaurant()
             area:"North",
             cuisine:"Malay",
             link:"https://www.instagram.com/kerabubyarang/?hl=en",
-            img:"",
+            img:"/pictures/kerabu by arang.jpeg",
             tag:"",
         },
         {
@@ -192,7 +170,7 @@ function getRestaurant()
             area:"North",
             cuisine:"Chinese",
             link:"https://www.todayonline.com/8days/ex-crystal-jade-chef-who-opened-soup-stall-says-biz-isnt-great-he-still-earns-more-hawker-2426906",
-            img:"",
+            img:"/pictures/lao fu jia soup.jpeg",
             tag:"",
         },
     ];
@@ -236,18 +214,21 @@ function createUserCard(item) {
     card.classList.add("card");
 
     var imgElement = document.createElement("img");
-    imgElement.src = "shushu.jpeg";//replace with item.img
+    imgElement.src = item.img;
     imgElement.style.width="280px";
 
     var restNElement = document.createElement("h2");
     restNElement.textContent = item.restN;
 
     var linkElement = document.createElement("a");
-    linkElement.textContent = "link";
+    linkElement.textContent = "Website";
     linkElement.href = item.link;
 
     var cuisineElement = document.createElement("p");
     cuisineElement.textContent = "Cuisine: " + item.cuisine;
+
+    var areaElement = document.createElement("p");
+    areaElement.textContent = "Location: " + item.area;
 
     var priceElement = document.createElement("p");
     priceElement.textContent = "Price: $<" + item.price;
@@ -256,6 +237,7 @@ function createUserCard(item) {
     card.appendChild(imgElement);
     card.appendChild(cuisineElement);
     card.appendChild(priceElement);
+    card.appendChild(areaElement);
     card.appendChild(linkElement);
 
     return card;

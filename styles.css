@@ -133,3 +133,12 @@ input[type="words"] {
     background-color: #f9f9f9;
     position:relative;
 }
+
+.Introduction{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    
+}
