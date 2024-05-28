@@ -188,7 +188,6 @@ function getRestaurant()
     });
 
     displayResults(filteredData);
-    var resultsContainer = document.getElementById('results');
 }
 
 function displayResults(filteredData) {

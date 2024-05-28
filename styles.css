@@ -53,18 +53,6 @@ button:hover {
     background-color: gold;
 }
 
-#recommendation {
-    margin-top: 20px;
-}
-
-.background-image {
-    background-image: url('shushu.jpeg'); /* Replace 'background-image.jpg' with the path to your image */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 100%;
-}
-
 header {
     background-image: url('new1.png');
     background-position: center;
